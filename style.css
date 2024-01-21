@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Young+Serif&display=swap");
+:root {
+  /*## Colors*/
+
+  /*### Primary*/
+  --Nutmeg: hsl(14, 45%, 36%);
+  --Dark-Raspberry: hsl(332, 51%, 32%);
+
+  /*### Neutral*/
+  --White: hsl(0, 0%, 100%);
+  --Rose-White: hsl(330, 100%, 98%);
+  --Eggshell: hsl(30, 54%, 90%);
+  --Light-Grey: hsl(30, 18%, 87%);
+  --Wenge-Brown: hsl(30, 10%, 34%);
+  --Dark-Charcoal: hsl(24, 5%, 18%);
+}
+body {
+  color: var(--Wenge-Brown);
+  background-color: var(--Eggshell);
+  font-size: 16px;
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+  /*font-family: "Young Serif", serif;*/
+  /*flex*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainSite {
+  background-color: rgb(255, 255, 255);
+  border-radius: 2em;
+  padding: 2em;
+  width: calc(1312px / 2);
+}
+.pic {
+  background-image: url("./assets/images/image-omelette.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: calc(1312px / 2);
+  height: calc(600px / 2);
+  border-radius: 1em;
+  /*height: 600px;
+  width: 1312px;*/
+}
+.card {
+  border-bottom: 2px solid var(--Light-Grey);
+}
+.PreparationCard {
+  background-color: var(--Rose-White);
+  padding: 1em;
+  border-radius: 1em;
+}
+.title1 {
+  color: var(--Dark-Charcoal);
+  font-family: "Young Serif", serif;
+  font-weight: lighter;
+}
+.title2 {
+  color: var(--Nutmeg);
+  font-family: "Young Serif", serif;
+  font-weight: lighter;
+}
+.title3 {
+  color: var(--Dark-Raspberry);
+}
+.listIngredients {
+  list-style: square;
+  padding: 0;
+  padding-left: 1.5em;
+}
+.listIngredients li::marker {
+  color: var(--Nutmeg);
+}
+.listIngredients li {
+  padding-left: 1em;
+  margin-bottom: 1em;
+}
+.listInstructions {
+  padding: 0;
+  padding-left: 1.5em;
+}
+.listInstructions li::marker {
+  font-weight: bold;
+  color: var(--Nutmeg);
+}
+.listInstructions li {
+  padding-left: 1em;
+  margin-bottom: 1em;
+  line-height: 1.5em;
+}
+/*------------tbl Nutrition----------*/
+.tblNutrition {
+  width: 100%;
+  border-collapse: collapse;
+}
+.tblNutrition td {
+  border-bottom: 2px solid var(--Light-Grey);
+  padding: 1em 0;
+}
+.tblNutrition tr td:first-child {
+  padding-left: 2em;
+}
+.tblNutrition tr:last-child td {
+  border-bottom: none;
+}
+
+.tdVal {
+  color: var(--Nutmeg);
+  font-weight: bold;
+}
+/*-----------------------*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

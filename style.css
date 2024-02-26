@@ -1,11 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Young+Serif&display=swap");
 :root {
   /*## Colors*/
-
   /*### Primary*/
   --Nutmeg: hsl(14, 45%, 36%);
   --Dark-Raspberry: hsl(332, 51%, 32%);
-
   /*### Neutral*/
   --White: hsl(0, 0%, 100%);
   --Rose-White: hsl(330, 100%, 98%);
@@ -13,14 +11,16 @@
   --Light-Grey: hsl(30, 18%, 87%);
   --Wenge-Brown: hsl(30, 10%, 34%);
   --Dark-Charcoal: hsl(24, 5%, 18%);
+  /*size*/
 }
 body {
-  color: var(--Wenge-Brown);
   background-color: var(--Eggshell);
+  /*text*/
+  color: var(--Wenge-Brown);
   font-size: 16px;
-  margin: 0;
   font-family: "Outfit", sans-serif;
-  /*font-family: "Young Serif", serif;*/
+  /*space*/
+  margin: 5em 0;
   /*flex*/
   display: flex;
   flex-direction: column;
@@ -35,35 +35,57 @@ body {
   width: calc(1312px / 2);
 }
 .pic {
+  /*image*/
   background-image: url("./assets/images/image-omelette.jpeg");
   background-size: contain;
   background-repeat: no-repeat;
+  /*border*/
+  border-radius: 1em;
+  /*size*/
   width: calc(1312px / 2);
   height: calc(600px / 2);
-  border-radius: 1em;
   /*height: 600px;
   width: 1312px;*/
 }
 .card {
   border-bottom: 2px solid var(--Light-Grey);
+  padding-bottom: 1em;
 }
 .PreparationCard {
   background-color: var(--Rose-White);
-  padding: 1em;
+  padding: 2em;
   border-radius: 1em;
+}
+.title1,
+.title2 {
+  font-family: "Young Serif", serif;
+  font-weight: lighter;
 }
 .title1 {
   color: var(--Dark-Charcoal);
-  font-family: "Young Serif", serif;
-  font-weight: lighter;
 }
 .title2 {
   color: var(--Nutmeg);
-  font-family: "Young Serif", serif;
-  font-weight: lighter;
 }
 .title3 {
   color: var(--Dark-Raspberry);
+  margin-top: 0;
+}
+/*-------------------------------------*/
+.listTime {
+  padding: 0;
+  padding-left: 1.5em;
+  margin: 0;
+}
+.listTime li::marker {
+  color: var(--Dark-Raspberry);
+}
+.listTime li {
+  padding-left: 1em;
+  margin-bottom: 1em;
+}
+.listTime li:last-of-type {
+  margin-bottom: 0;
 }
 .listIngredients {
   list-style: square;
@@ -114,8 +136,35 @@ body {
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-top: 1em;
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/*------------Mobile-------------*/
+@media screen and (max-width: 500px) {
+  body {
+    background-color: var(--White);
+    margin: 0;
+  }
+  .mainSite {
+    background-color: none;
+    border-radius: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .content {
+    padding: 0 2em;
+    padding-bottom: 2em;
+  }
+  .pic {
+    background-image: url("./assets/images/image-omelette.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: calc(600px / 3.5);
+    border-radius: 0;
+  }
 }
